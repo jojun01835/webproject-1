@@ -17,6 +17,7 @@
 	<link rel='stylesheet' href='css/reset.css'>
 	<link rel='stylesheet' href='css/style1.css'>
 
+
 	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
@@ -26,6 +27,7 @@
 
         let nowMonth = new Date();  // 현재 달을 페이지를 로드한 날의 달로 초기화
         let today = new Date();     // 페이지를 로드한 날짜를 저장
+        let day = today.getDate();
         today.setHours(0,0,0,0);    // 비교 편의를 위해 today의 시간을 초기화
 
         // 달력 생성 : 해당 달에 맞춰 테이블을 만들고, 날짜를 채워 넣는다.
@@ -72,6 +74,7 @@
                 }
                 else {                                      // 미래인 경우
                     nowColumn.className = "futureDay";
+                    
                     nowColumn.onclick = function () { choiceDate(this); }
                 }
             }
@@ -96,6 +99,7 @@
             buildCalendar();    // 달력 다시 생성
         }
 
+        
         // input값이 한자리 숫자인 경우 앞에 '0' 붙혀주는 함수
         function leftPad(value) {
             if (value < 10) {
@@ -506,13 +510,13 @@
                         <td onClick="nextCalendar();" style="cursor:pointer;">&#62;</td>
                     </tr>
                     <tr>
-                        <td class="text_red">일</td>
+                        <td style="color: re;">일</td>
                         <td>월</td>
                         <td>화</td>
                         <td>수</td>
                         <td>목</td>
                         <td>금</td>
-                        <td class="text_blue">토</td>
+                        <td style="color: blue;">토</td>
                     </tr>
                 </thead>
 
@@ -620,23 +624,22 @@
                     </div>
                 </div>
             </div>
-            <div class="under_num_box">
-                <div class="under_num_wrap">
-                    <ul>
-                        <li><a href="#">&lt;&lt;</a></li>
-                        <li><a href="#">&lt;</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">&gt;</a></li>
-                        <li><a href="#">&gt;&gt;</a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </div>
-
+    <div class="under_num_box">
+        <div class="under_num_wrap">
+            <ul>
+                <li><a href="#">&lt;&lt;</a></li>
+                <li><a href="#">&lt;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">&gt;</a></li>
+                <li><a href="#">&gt;&gt;</a></li>
+            </ul>
+        </div>
+    </div>
     <footer id="footer">
         <div class="footer_container">
             <div class="logo_footer"><a href="#" alt="한국문화재재단 로고"></a></div>
@@ -670,7 +673,9 @@
                         <div class="last_last_logo2"></div>
 
             </div>
+
         </div>
     </footer>
+    
 </body>
 </html>
