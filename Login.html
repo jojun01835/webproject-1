@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styleL.css" />
+    <script src="./js/script1.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  </head>
+  <body>
+    <div class="form">
+      <h3><img src="./img/goorm.svg" width="100" height="63" /></h3>
+      <div class="text_wrap">
+        <span class="goorm_tex">하나의 아이디로 구름서비스를 이용하세요.</span><br />
+        <span class="goorm_tex2">다른 서비스로 로그인</span>
+      </div>
+      <div class="login_f">
+        <a href="#" class="imglogo google"></a>
+        <a href="#" class="imglogo kakao"></a>
+        <a href="#" class="imglogo naver"></a>
+        <a href="#" class="imglogo git"></a>
+        <a href="#" class="imglogo cof"></a>
+        <a href="#" class="imglogo plogo"></a>
+      </div>
+      <div class="logo_line">
+        <div class="gray_line"></div>
+        <div class="content">또는</div>
+      </div>
+
+      <fieldset>
+        <legend class="ir_so">회원가입</legend>
+
+        <form action="./login.html" method="post" name="signup" id="signup">
+          <ul>
+            <li>
+              <input type="text" id="email" class="line" required size="30" placeholder="이메일" />
+              <button class="in">인증</button>
+              <p id="eMes" class="message1 off">이메일을 입력해주세요</p>
+            </li>
+
+            <li>
+              <input type="password" id="pwArea" class="line" required size="16" placeholder="비밀번호 (영문, 숫자, 특수문자 8-30자)" />
+              <button class="eyes" type="button"><img src="https://statics.goorm.io/images/accounts/passwordViewOff.svg" /></button>
+              <p id="pwMes" class="message2 off">영문, 숫자, 특수문자를 조합하여 8-30자로 입력해주세요.</p>
+            </li>
+            <li>
+              <input type="password" id="pwArea2" class="line" required size="30" placeholder="비밀번호 확인" />
+              <button class="eyes" type="button"><img src="https://statics.goorm.io/images/accounts/passwordViewOff.svg" /></button>
+              <p id="pwMes2" class="message3 off">비밀번호가 일치하지 않습니다.</p>
+            </li>
+            <li>
+              <input type="text" id="name" class="line" required size="30" placeholder="이름 (2-30자)" />
+              <p id="name1" class="message4 off">올바른 이름을 입력해주세요</p>
+            </li>
+            <li>
+              <input type="checkbox" checked />
+              <span>새 기능, 이벤트 홍보, 대회 안내 등의 알림 수신 </span>
+              <span class="chi">(<!-- -->선택<!-- -->)</span>
+              <div class="auth_text">
+                <span> 이용약관의 변경이나 관계 법령에 따라 회원님께 안내되어야 할 중요 고지 사항은 메일 수신 동의 여부에 상관 없이 안내될 수 있습니다. </span>
+              </div>
+            </li>
+            <li>
+              <input type="text" value="회원가입" class="btn" id="submit" />
+            </li>
+            <li>
+              <div class="underline">
+                <span>이미 계정이 있으세요?</span>
+                <a href="#"><span>로그인</span></a>
+              </div>
+            </li>
+            <li>
+              <p class="auth_footer">
+                <span
+                  >회원가입 시 goorm의
+                  <a href="#">
+                    <strong>서비스 약관</strong>
+                  </a>
+                  및
+                  <br />
+                  <a href="#">
+                    <strong>개인정보 처리방침</strong>
+                  </a>
+                  을 확인하였으며, 동의합니다.
+                </span>
+              </p>
+            </li>
+          </ul>
+        </form>
+      </fieldset>
+    </div>
+  </body>
+</html>
